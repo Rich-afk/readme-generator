@@ -22,7 +22,7 @@ const questions = [
       },
       {
         type: 'input',
-        message: 'What is your project about',
+        message: 'What is your project about?',
         name: 'description',
       },
       {
@@ -45,17 +45,12 @@ const questions = [
         message: 'What does the user need to know about contributing?',
         name: 'contributing',
       },
-      {
-        type: 'input',
-        message: 'What is the title?',
-        name: 'username',
-      },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    const READMEContent = `## ${data}
+    const READMEContent = `## ${data['projectName']}
 
     ## Table of Contents
     1. [Installation](#installation)
@@ -67,27 +62,38 @@ function writeToFile(fileName, data) {
     
     ## Installation
 
-    run 
-    ${data}
+    Run this programming using 
+
+    \`\`\`bash
+    ${data['test']}
+    \`\`\`
 
     ## Usage
     
-    ${data}
+    ${data['description']}
 
     ## License
 
-    ${data}
+    ${data['license']}
     
     ## Contributing
     
-    ${data}
+    ${data['contributing']}
 
     ## Tests
 
-    ${data}
+    Run the below command to test the program.
+    \`\`\`bash
+    ${data['test']}
+    \`\`\`
     
     ## Questions
-    ${data}
+
+    For any questions, please contact me using the information below:
+
+    Github: @${data['username']}
+    
+    Email: ${data['email']}
     `
 
     fs.writeFile(`${fileName}.md`, READMEContent, (err) => {
@@ -96,7 +102,11 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then(writeToFile)
+}
 
 // Function call to initialize app
 init();
