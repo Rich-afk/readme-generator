@@ -1,4 +1,4 @@
-## c
+## Example Project
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -13,32 +13,32 @@
 Run this programming using 
 
 ```bash
-    e
+    npm install
 ```
 
 ## Usage
     
-d
+My project is about some example.
 
 ## License
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
     
 ## Contributing
     
-g
+Contact me if you'd like to contribute.
 
 ## Tests
 
 Run the below command to test the program.
 ```bash
-    f
+    node index.js
 ```
     
 ## Questions
 
 For any questions, please contact me using the information below:
 
-Github: @a
+Github: @Rich-afk
     
-Email: b
+Email: r.c.kim3@gmail.com

@@ -25,7 +25,7 @@ This creates a simple readme using a template.
     
 ## Visual
 
-
+![README image](./2022-03-17%2022-28-09.gif)
 
 ## Questions
 
